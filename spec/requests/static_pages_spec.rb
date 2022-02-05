@@ -5,7 +5,7 @@ RSpec.describe "StaticPages", type: :request do
     it "returns http success" do
       get "/static_pages/home"
       expect(response).to have_http_status(:success)
-      assert_select "title", "home"
+      assert_select "title", "home | Ruby on Rails Tutorial Sample App"
     end
   end
 
