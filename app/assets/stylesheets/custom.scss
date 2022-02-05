@@ -1,0 +1,26 @@
+/*header*/
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #0000cd;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/*footer*/
+
+footer {
+  margin-top: 30px;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}

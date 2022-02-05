@@ -6,10 +6,20 @@
   </head>
 
   <body>
-  <h1>Home</h1>
-  <p>
-    This is the home page of Ruby on Rails tutorial sample app
-  </p>
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <h1>
+          Welcome to the sample app
+        </h1>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <%= link_to "Sign up now", signup_path, class: "btn btn-lg", style: "background-color: #00bfff" %>
+        <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"), "https://rubyonrails.org/" %>
+      </div>
+    </div>
   </body>
 
 </html>
