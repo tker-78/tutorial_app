@@ -1,0 +1,10 @@
+<div class="justify-content-md-center">
+  <% @users.each do |user| %>
+    <ul>
+      <li>
+        <%= gravatar_for(user) %>
+        <%= user.name %>
+      </li>
+    </ul>
+  <% end %>
+</div>
