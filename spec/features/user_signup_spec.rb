@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Users", type: :feature do
+RSpec.feature "User signup", type: :feature do
   scenario "create new user" do
     expect {
       visit root_path
