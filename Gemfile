@@ -38,6 +38,11 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+<<<<<<< HEAD
+=======
+  gem 'poltergeist'
+  gem 'show_me_the_cookies'
+>>>>>>> advanced-login
 end
 
 group :development do

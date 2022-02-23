@@ -15,6 +15,7 @@ RSpec.feature "User signup", type: :feature do
       expect(page).to have_content("ユーザー登録が成功しました")
       expect(page).to have_content "This is the show page of user tatataa"
           }.to change(User.all, :count).by(1) 
+      expect(page).to have_content("ログインしています")
   end
 
   scenario "fail to create new user" do
