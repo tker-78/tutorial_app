@@ -22,4 +22,5 @@ ActiveRecord::Schema.define(version: 2022_02_19_081259) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+
 end
