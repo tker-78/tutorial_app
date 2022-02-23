@@ -20,11 +20,6 @@ module SessionsHelper
   end
 
   def logout
-<<<<<<< HEAD
-    session.delete(:user_id)
-    @current_user = nil
-  end
-=======
     forget current_user 
     session.delete(:user_id)
     @current_user = nil
@@ -41,6 +36,5 @@ module SessionsHelper
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
->>>>>>> advanced-login
 
 end

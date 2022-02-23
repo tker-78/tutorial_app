@@ -10,13 +10,6 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
 
-<<<<<<< HEAD
-  # def self.digest(string)
-  #   cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
-  #   BCrypt::Password.create(string, cost: cost)
-  # end
-
-=======
   attr_accessor :remember_token
 
   def self.digest(string)
@@ -40,5 +33,4 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
->>>>>>> advanced-login
 end
