@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "Sessions", type: :request do
-  describe "GET /new" do
-    it "returns http success" do
-      get "/login"
-      expect(response).to have_http_status(:success)
+  let(:user) { FactoryBot.build(:user)}
+  describe "login with remember me" do
+    it "has remember_token in cookies" do
+      log_in_as(user)
+      expect(cookies[:remember_token]).to_not be_empty
     end
   end
+
 
 end

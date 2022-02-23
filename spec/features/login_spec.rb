@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature "Logins", type: :feature do
-  before do
-    FactoryBot.create(:user)
-  end
+  let(:user) { FactoryBot.build(:user) }
+
   scenario "Login with invalid parameter" do
       visit login_path
       fill_in "Email", with: ""

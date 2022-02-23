@@ -38,8 +38,8 @@ RSpec.configure do |config|
 
   # Custom helperモジュールの読み込み
   config.include CustomHelper
-  
-
+  config.include CustomFeatureHelper, type: :feature 
+  config.include ShowMeTheCookies, type: :feature
 
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
