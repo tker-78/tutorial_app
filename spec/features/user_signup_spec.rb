@@ -28,7 +28,7 @@ RSpec.feature "User signup", type: :feature do
 
     click_button "Create my account"
     expect(page).to have_content("ユーザー登録に失敗しました")
-    expect(page).to have_content "The form contains 6 errors"
+    expect(page).to have_content "The form contains 4 errors"
   end
 
 end
