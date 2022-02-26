@@ -47,5 +47,17 @@ RSpec.describe "Users", type: :request do
       put user_path user
       expect(response).to redirect_to users_path
     end
+
+    it "successful edit when friendly forwarding" do
+      get edit_user_path user
+      log_in_as user
+      expect(response).to redirect_to edit_user_path user
+
+    end
+
+    it "redirect index when not logged in" do
+      get users_path
+      expect(response).to redirect_to login_path
+    end
   end
 end

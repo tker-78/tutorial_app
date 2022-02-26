@@ -1,9 +1,9 @@
 <div class="justify-content-md-center">
   <% @users.each do |user| %>
-    <ul>
+    <ul class="users">
       <li>
         <%= gravatar_for(user) %>
-        <%= user.name %>
+        <%= link_to user.name, user %>
       </li>
     </ul>
   <% end %>
