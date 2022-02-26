@@ -15,10 +15,4 @@
  @import "bootstrap";
  @import "bootstrap-sprockets";
  @import "custom"; 
-
-
- /* general */
-
- ul {
-   list-style: none;
- }
+ @import "users";

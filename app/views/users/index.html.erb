@@ -1,10 +1,7 @@
-<div class="justify-content-md-center">
-  <% @users.each do |user| %>
+<div class="justify-content-md-center"> 
+  <%= will_paginate %>
     <ul class="users">
-      <li>
-        <%= gravatar_for(user) %>
-        <%= link_to user.name, user %>
-      </li>
+       <%= render @users %>
     </ul>
-  <% end %>
+  <%= will_paginate %>
 </div>

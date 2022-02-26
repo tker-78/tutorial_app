@@ -60,4 +60,37 @@ RSpec.describe "Users", type: :request do
       expect(response).to redirect_to login_path
     end
   end
+
+  describe "User admin" do
+    let(:user) { FactoryBot.create(:user1)}
+    it "not have admin" do
+      log_in_as user
+      expect(user.admin?).to be_falsey
+      patch user_path(user), params: {user: {password: "password",
+                                              password_confirmation: "password",
+                                              admin: 1 
+                                              }}
+      expect(user.admin?).to be_falsey
+    end
+  end
+
+  describe "delete user" do
+    let(:admin_user) { FactoryBot.create(:user) }
+    let(:other_user) { FactoryBot.create(:user2)}
+    context "when current_user is admin" do
+      it "can delete user" do
+        log_in_as admin_user
+        delete user_path other_user
+        expect(flash[:success]).to_not be_empty
+      end
+    end
+
+    context "when current_user is not admin" do
+      it "can not delete user" do
+        log_in_as other_user
+        delete user_path admin_user
+        expect(flash[:danger]).to_not be_empty 
+      end
+    end
+  end
 end
