@@ -10,7 +10,8 @@ User.create!(name: "example user",
             email: "example@gmail.com",
             password: "password",
             password_confirmation: "password",
-            admin: true)
+            admin: true,
+            activated: true )
 
 
 
@@ -21,5 +22,6 @@ User.create!(name: "example user",
   User.create!(name: name,
               email: email,
               password: password,
-              password_confirmation: password)
+              password_confirmation: password,
+              activated: true )
 end

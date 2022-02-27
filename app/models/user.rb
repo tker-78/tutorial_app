@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   before_save { self.email = email.downcase }
+  before_create :create_activation_digest
   validates :name, presence: true 
   validates :email, presence: true
   validates :name, length: { maximum: 50}
@@ -10,7 +11,8 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-  attr_accessor :remember_token
+
+  attr_accessor :remember_token, :activation_token
 
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
@@ -26,11 +28,35 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, User.digest(self.remember_token))
   end
 
-  def authenticated?(remember_token)
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  # def authenticated?(remember_token)
+  #   BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  # end
+
+
+  # remember_digest, activation_digestのどちらでも同じメソッドを使えるようにする
+  def authenticated?(attribute, token)
+    digest = self.send("#{attribute}_digest")
+    BCrypt::Password.new(digest).is_password?(token)    
   end
+
 
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  def activate
+    update_attribute(:activated, true )
+    update_attribute(:activated_at, Time.zone.now )
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
+  private
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(activation_token)
+  end
+
 end

@@ -21,11 +21,13 @@
 FactoryBot.define do
   factory "user", class: :user do
     name { "test user" }
-    email { "testuser@gmail.com" }
+    email { "testuser_admin@gmail.com" }
     password { "password" }
     password_confirmation { "password" }
     remember_digest { "remember_digest" }
     admin { true }
+    activated { true }
+    activated_at { Time.zone.now}
   end
 
   99.times do |n|
@@ -36,6 +38,8 @@ FactoryBot.define do
       password_confirmation { "password" }
       remember_digest { "remember_digest" }
       admin { nil }
+      activated { true unless n == 11 }
+      activated_at { Time.zone.now }
     end
   end
 

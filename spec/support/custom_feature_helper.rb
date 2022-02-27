@@ -5,4 +5,8 @@ module CustomFeatureHelper
     fill_in "Password", with: user.password
     click_button "Log in"
   end
+
+  def is_logged_in?
+    !page.get_rack_session_key('user_id').nil?
+  end
 end
