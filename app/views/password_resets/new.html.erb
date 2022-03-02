@@ -1,0 +1,15 @@
+
+<div class="row justify-content-md-center" >
+  <h1> パスワードの再設定 </h1>
+</div>
+
+
+<div class="row justify-content-md-center">
+  <%= form_with(url: password_resets_path, scope: :password_reset, local: true ) do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form-control" %>
+
+    <%= f.submit "password reset", class: "btn btn-primary" %>
+
+  <% end %>
+</div>

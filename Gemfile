@@ -43,6 +43,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'poltergeist'
   gem 'show_me_the_cookies'
+  gem 'database_cleaner'
 end
 
 group :development do

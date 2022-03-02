@@ -17,16 +17,19 @@ RSpec.describe UserMailer, type: :mailer do
   end
 
   describe "password_reset" do
-    let(:mail) { UserMailer.password_reset }
+    let(:user) { FactoryBot.create(:user15)}
+    let(:mail) { UserMailer.password_reset(user) }
 
     it "renders the headers" do
-      expect(mail.subject).to eq("Password reset")
-      expect(mail.to).to eq(["to@example.org"])
+      user.create_reset_digest
+      expect(mail.subject).to eq("Password Reset")
+      expect(mail.to).to eq(["#{user.email}"])
       expect(mail.from).to eq(["noreply@example.com"])
     end
 
     it "renders the body" do
-      expect(mail.body.encoded).to match("Hi")
+      user.create_reset_digest
+      expect(mail.body.encoded).to match("Hi #{user.name}")
     end
   end
 
