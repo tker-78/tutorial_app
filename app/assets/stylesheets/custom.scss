@@ -96,3 +96,27 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+
+
+/* micropost */
+
+.microposts {
+  list-style: none;
+  li {
+    padding: 10px 0;
+    border-top: solid 1px;
+  }
+  .content {
+    display: block;
+  }
+  .timestamp {
+    display: block;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+

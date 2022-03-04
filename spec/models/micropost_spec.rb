@@ -33,4 +33,10 @@ RSpec.describe Micropost, type: :model do
       expect(@user.microposts.find_by(content: "most recent")).to eq Micropost.first
     end
   end
+
+  context "user deleted" do
+    it "microposts is deleted also" do
+      expect{@user.destroy}.to change{Micropost.count}.by(-2)
+    end
+  end
 end

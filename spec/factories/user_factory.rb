@@ -42,5 +42,4 @@ FactoryBot.define do
       activated_at { Time.zone.now }
     end
   end
-
 end

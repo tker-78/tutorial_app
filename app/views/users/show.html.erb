@@ -1,12 +1,18 @@
-<div class="row justify-content-md-center">
-  <h1>  
-    <%= "This is the show page of user #{@user.name} " %>
-  </h1>
-</div>
-
 <div class="container">
   <h1>
     <%= gravatar_for @user %>
     <%= @user.name %>
   </h1>
+
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3> Microposts (<%= @user.microposts.count %>) </h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <div class="pagination" >
+        <%= will_paginate @microposts %>
+      </div>
+    <% end %>
+  </div>
 </div>
