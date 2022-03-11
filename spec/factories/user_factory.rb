@@ -33,7 +33,7 @@ FactoryBot.define do
   99.times do |n|
     factory "user#{n}", class: :user do
       name { "test user#{n}" }
-      email { "testuser#{n}@gmail.com" }
+      email { "testuser#{n}@user.com" }
       password { "password" }
       password_confirmation { "password" }
       remember_digest { "remember_digest" }

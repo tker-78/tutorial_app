@@ -4,9 +4,7 @@ RSpec.feature "Followings", type: :feature do
   before do
     @user = FactoryBot.create(:user)
     log_in_as @user
-    99.times do |n|
-      FactoryBot.create("followinguser#{n}")
-    end
+
   end
 
   scenario "following page" do

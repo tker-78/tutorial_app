@@ -11,14 +11,14 @@ RSpec.feature "PasswordResets", type: :feature do
 
   scenario "password resets" do
     visit new_password_reset_path
-    fill_in "Email", with: "testuser@gmail.com"
+    fill_in "Email", with: "testuser@user.com"
     click_button "password reset"
     expect(page).to have_content "emailの登録がありませんでした"
 
-    fill_in "Email", with: "testuser50@gmail.com"
+    fill_in "Email", with: "testuser50@user.com"
     click_button "password reset"
     expect(page).to have_content "パスワードリセット用のメールを送りました"
-    @user = User.find_by(email: "testuser50@gmail.com")
+    @user = User.find_by(email: "testuser50@user.com")
     @user.create_reset_digest
     expect(@user.reset_token).to_not eq nil
     expect(@user.reset_digest).to_not eq nil
