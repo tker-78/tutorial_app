@@ -93,4 +93,20 @@ RSpec.describe "Users", type: :request do
       end
     end
   end
+
+  describe "follow and unfollow" do
+    let(:user) { FactoryBot.create(:user)}
+    let(:other_user) { FactoryBot.create(:user2)}
+
+    it "can not access follow when not logged in" do
+      get following_user_path user
+      expect(response).to redirect_to login_path
+    end
+
+    it "can not access unfollow when no logged in" do
+      get followers_user_path user
+      expect(response).to redirect_to login_path
+    end
+    
+  end
 end

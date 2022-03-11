@@ -93,4 +93,22 @@ RSpec.describe User, type: :model do
     end
 
   end
+
+
+  describe "following users" do
+    before do
+      @user = FactoryBot.create(:user60)
+      @other_user = FactoryBot.create(:user61)
+    end
+
+    it "follow and unfollow a user" do
+      expect(@user.following?(@other_user)).to be_falsey
+      @user.follow(@other_user)
+      expect(@user.following?(@other_user)).to be_truthy
+      expect(@other_user.followers.include?(@user)).to be_truthy
+      @user.unfollow(@other_user)
+      expect(@user.following?(@other_user)).to be_falsey
+
+    end
+  end
 end
