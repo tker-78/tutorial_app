@@ -111,4 +111,20 @@ RSpec.describe User, type: :model do
 
     end
   end
+
+
+  describe "User feed" do
+    before do
+      @user = FactoryBot.create(:user)
+      @second_user = FactoryBot.create(:user71)
+      @third_user = FactoryBot.create(:user72)
+    end
+
+    it "feed has the right posts" do
+      @third_user.microposts.each do |post_following|
+        expect(@user.feed).to include post_following
+        pending
+      end
+    end
+  end
 end
