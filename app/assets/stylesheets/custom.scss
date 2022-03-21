@@ -3,7 +3,7 @@
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #070725;
+  color: white;
   text-transform: uppercase;
   font-weight: bold;
   font-style: italic;
@@ -12,6 +12,10 @@
 #logo:hover {
   color: #000;
   text-decoration: none;
+}
+
+.header-menu {
+  color: white;
 }
 
 
