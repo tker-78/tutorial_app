@@ -1,81 +1,133 @@
-<h1>This is my html-training page!</h1>
+<!DOCTYPE html>
+  <head>
+    <style>
+      h1 {
+        color: red;
+      }
+
+      h2 {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <h1>This is my html-training page!</h1>
 
 
-<h1>h1</h1>
-<h2>h2</h2>
-<h3>h3</h3>
-<h4>h4</h4>
-<h5>h5</h5>
-<h6>h6</h6>
-<p><strong>Strong</strong></p>
-<p>paragraph</p>
 
-<p><%= "p"*188 %></p>
-<span><%= "span"*188 %></span>
-<p>
-  <a href="https://google.com">Google</a>
-</p>
+  <h1>h1</h1>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <h4>h4</h4>
+  <h5>h5</h5>
+  <h6>h6</h6>
+  <p><strong>Strong</strong></p>
+  <p>paragraph</p>
 
-<p>
-  <a href="mailto:kktak02@gmail.com">メールで連絡</a>
-</p>
+  <p><%= "p"*188 %></p>
+  <span><%= "span"*188 %></span>
+  <p>
+    <a href="https://google.com">Google</a>
+  </p>
 
-<ul>
-  <li>iMac</li>
-  <li>iPad</li>
-  <li>iPhone</li>
-  <li>List-style: circle; </li>
-</ul>
+  <p>
+    <a href="mailto:kktak02@gmail.com">メールで連絡</a>
+  </p>
 
-
-<ol>
-  <li>iMac</li>
-  <li>iPad</li>
-  <li>iPhone</li>
-  <li>List-style: circle; </li>
-</ol>
-
-<table border="1">
-  <tr>
-    <th>phone</th>
-    <th>pc</th>
-    <th>tablet</th>
-  </tr>
-
-  <tr>
-    <td>iPhone12</td>
-    <td>iMac'24</td>
-    <td>iPad Pro</td>
-  </tr>
-</table>
-
-<table border="1">
-  <tr>
-    <th colspan="3">My Gadjets</th>
-  </tr>
-  <tr>
-    <td>iPhone12</td>
-    <td>iMac'24</td>
-    <td>iPad Pro</td>
-  </tr>
-</table>
-
-<!--これはコメントです -->
-
-フォーム
-<form action="/help" accept-charset="UTF-8" method="post" name="contact-form">
-  <input type="text" placeholder="コメントを入力してください">
-  <input type="checkbox" name="gender" id="male">male
-  <input type="checkbox" name="gender" id="female">female
-  <input type="checkbox" name="gender" id="other" checked >other
-  <input type="submit" value="送信する">
-</form>
+  <ul>
+    <li>iMac</li>
+    <li>iPad</li>
+    <li>iPhone</li>
+    <li>List-style: circle; </li>
+  </ul>
 
 
-血液型
-<select name="bloodtype">
-  <option value="A">A</option>
-  <option value="B">B</option>
-  <option value="O">O</option>
-  <option value="AB">AB</option>
-</select>
+  <ol>
+    <li>iMac</li>
+    <li>iPad</li>
+    <li>iPhone</li>
+    <li>List-style: circle; </li>
+  </ol>
+
+  <table border="1">
+    <tr>
+      <th>phone</th>
+      <th>pc</th>
+      <th>tablet</th>
+    </tr>
+
+    <tr>
+      <td>iPhone12</td>
+      <td>iMac'24</td>
+      <td>iPad Pro</td>
+    </tr>
+  </table>
+
+  <table border="1">
+    <tr>
+      <th colspan="3">My Gadjets</th>
+    </tr>
+    <tr>
+      <td>iPhone12</td>
+      <td>iMac'24</td>
+      <td>iPad Pro</td>
+    </tr>
+  </table>
+
+  <!--これはコメントです -->
+
+  フォーム
+  <form action="/help" accept-charset="UTF-8" method="post" name="contact-form">
+    <input type="text" placeholder="コメントを入力してください">
+    <input type="checkbox" name="gender" id="male">male
+    <input type="checkbox" name="gender" id="female">female
+    <input type="checkbox" name="gender" id="other" checked >other
+    <input type="submit" value="送信する">
+  </form>
+
+
+  血液型
+  <select name="bloodtype">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="O">O</option>
+    <option value="AB">AB</option>
+  </select>
+
+  <textarea name="message" id="message-1" cols="30" rows="10" placeholder="Message"></textarea>
+
+  <h2>フォームのラベルづけ</h2>
+  <input type="checkbox" name="region" id="Japan" value="Japan" >
+  <label for="Japan">Japan</label>
+  <input type="checkbox" name="region" id="Europe" >
+  <label for="Europe">Europe</label>
+  <input type="checkbox" name="region" id="America" >
+  <label for="America">America</label>
+
+  <h2>ブロック要素分け</h2>
+  <article>
+    <h3>明日の天気</h3>
+    <p>明日は曇りのち晴れでしょう。</p>
+  </article>
+
+  <section>
+    <h3>おすすめの着こなし</h3>
+    <p>この時期は暖かい気温が続きます</p>
+  </section>
+
+  <header>
+    <h3>これはheaderです</h3>
+  </header>
+  <aside>
+    <h3>これは補足情報です</h3>
+  </aside>
+
+  <footer>
+    <h3>これはfooterです</h3>
+  </footer>
+
+
+
+
+
+</html>
