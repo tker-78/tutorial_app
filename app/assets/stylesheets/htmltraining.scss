@@ -1,15 +1,14 @@
 body {
-  background-color: #fffeee;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {
-  color: gray;
+  color: #444;
   font-size: 4rem;
 }
 
 h2 {
-  color: blue;
+  color: #888;
   font-size: 3rem;
 }
 
@@ -23,4 +22,122 @@ p {
 
 .text-align{
   text-align: justify;
+}
+
+.container-1 {
+  text-align: justify;
+  margin: 3em;
+  
+  padding: 2em;
+  background-color: #fff000;
+
+  border-width: thick;
+  border-style: solid;
+}
+
+.container-2 {
+  text-align: justify;
+  margin: 3em;
+  padding: 2em;
+  background-color: #fff000;
+  border-width: thick;
+  border-style: double;
+}
+
+.container-3 {
+  text-align: justify;
+  margin: 3em;
+  padding: 2em;
+  background-color: #fff000;
+  border-width: thick;
+  border-style: dashed;
+}
+
+.container-4 {
+  text-align: justify;
+  margin: 3em;
+  padding: 2em;
+  background-color: #fff000;
+  border-width: thick;
+  border-style: dotted;
+}
+
+.divider {
+  border-bottom: 1px solid #888888
+}
+
+.list-marker{
+  margin-top: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #aa55ff;
+  border-width: thick;
+  border-style: solid;
+  border-color: #000000;
+  color: #ffffff;
+
+  ul {
+    list-style: upper-alpha;
+    list-style-position: inside;
+  }
+}
+
+
+.list-marker-2{
+  margin-top: 3em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #aa55ff;
+  border-width: thick;
+  border-style: solid;
+  border-color: #000000;
+  color: #ffffff;
+
+  ul {
+    list-style-position: inside;
+    list-style-image: url(rails.svg);
+  }
+}
+
+.item {
+  background: #0bd;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+.container-flex-1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-flex-2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container-flex-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-flex-4 {
+  display:  flex;
+  flex-direction: column-reverse;
+}
+
+.container-flex-5 {
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    width: 6em;
+    text-align: center;
+  }
+}
+
+.container-flex-6 {
+  display: flex;
+  justify-content: space-between;
 }
