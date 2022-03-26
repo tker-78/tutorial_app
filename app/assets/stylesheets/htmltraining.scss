@@ -141,3 +141,40 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
+.align-items-1 {
+  display: flex;
+  align-items: stretch;
+  height: 20vh;
+}
+
+.align-items-2 {
+  display: flex;
+  align-items: center;
+  height: 20vh;
+}
+
+
+.align-items-3 {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  .item {
+    width: 10em;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+
+.css-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px 200px;
+  gap: 3px;
+  .item {
+    background-color: #089;
+    padding: 10px;
+    text-align: center;
+  }
+}
