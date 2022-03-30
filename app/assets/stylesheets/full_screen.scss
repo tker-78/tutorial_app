@@ -15,9 +15,6 @@ a {
   text-decoration: none;
 }
 
-header {
-  background-color: #89a;
-}
 
 .page-header {
   display: flex;
@@ -33,7 +30,7 @@ header {
 #header-logo {
   width: 210px;
   margin-top: 14px;
-  color: #fff
+  color: #999
 }
 
 .main-nav {
@@ -58,4 +55,45 @@ header {
 .home-content p {
   font-size: 1.125rem;
   margin: 10px 0 42px;
+}
+
+
+/* 見出し */
+
+.page-title {
+  font-size: 4rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* button */
+
+.button {
+  font-size: 1.375rem;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.button:hover {
+  background: #0090aa;
+}
+
+
+/* news */
+
+#news {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 10px 20px 20px;
+}
+
+footer {
+  text-align: center;
+  background: #432;
+  padding: 10px 0;
+  margin-top: 10px;
+  color: #fff;
 }
