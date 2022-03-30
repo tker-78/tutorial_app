@@ -1,0 +1,2 @@
+module HtmlTrainingHelper
+end
