@@ -22,9 +22,43 @@
   </div>
 </div>
 
-<div class="news-content">
+<div class="news-contents wrapper">
+
+  <!-- メインエリアの記述 -->
+  <article>
+    <header class="post-info">
+      <h2 class="post-title">新しい機能が実装されました</h2>
+      <p class="post-date">3/30 <span>2022</span></p>
+      <p class="post-cat">カテゴリー:アプリの紹介</p>
+    </header>
+    <%= image_tag "image1.png", width: "50%", id: "image1"  %>
+    <p>
+      Railsアプリ内部にHTMLのトレーニング用のページを作成しています。
+      HTMLの基本的な使い方も曖昧なまま、Rails tutorialを完了したので、
+      貧弱なUIしか作れない状態だったので、イチから学んでいます。
+      参考にしている書籍は、「1冊で全て身につくHTML & CSSとWEBデザイン入門講座」です。
+    </p>
+  </article>
+
+  <!-- サイドバー部分 -->
+  <aside>
+    <h3 class="sub-title">カテゴリー</h3>
+      <ul class="sub-menu">
+        <li><a href="#">お店の紹介</a></li>
+        <li><a href="#">期間限定メニュー</a></li>
+        <li><a href=""">イベント</a></li>
+      </ul>
+
+    <h3 class="sub-title">このアプリについて</h3>
+    <p>
+      このアプリはただの練習用アプリです。
+      至らない部分があっても怒らないようにお願いします。
+    </p>
+  </aside>
 
 </div>
+
+
 
 
 
