@@ -31,12 +31,16 @@
 /*footer*/
 
 footer {
-  margin-top: 30px;
+  margin-top: 60px;
   color: #777;
 }
 
 footer a {
   color: #555;
+}
+
+.footer {
+  border-top: 1px solid #999;
 }
 
 /* mixin */
