@@ -237,3 +237,39 @@ aside {
   width: 30%;
   order: 1;
 }
+
+
+/* menu */
+
+#menu {
+  min-height: 100vh;
+  background: #eee;
+}
+
+.menu-content {
+  text-align: center;
+  padding-top: 20%;
+
+}
+
+.menu-content .numbers {
+  margin-top: 40px;
+}
+
+.menu-content p {
+  margin-top: 5px;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px 200px;
+  gap: 15px;
+  margin: 20px 20px;
+  .item {
+    background: #0bd;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

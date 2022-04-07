@@ -12,7 +12,6 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def full_screen
-  end
+
 
 end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/full_screen', to: 'html_training#full_screen'
   get '/two_column', to: 'html_training#two_column'
+  get '/menu', to: 'html_training#menu'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

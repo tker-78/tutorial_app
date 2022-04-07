@@ -1,0 +1,67 @@
+<head>
+  <%= stylesheet_link_tag 'full_screen', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <title>WCB Cafe - MENU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+
+<%= render 'html_training/header' %>
+
+<div id="menu">
+  <div class="menu-content wrapper">
+    <h2 class="page-title">Menu</h2>
+      <div class="numbers">
+        <p>
+          <% 50.times do %>
+            <%= rand(0..9) %>
+          <% end %>
+        </p>
+        <p>
+          <% 50.times do %>
+            <%= rand(0..9) %>
+          <% end %>
+        </p>
+        <p>
+          <% 50.times do %>
+            <%= rand(0..9) %>
+          <% end %>
+        </p>
+
+
+        <p>
+          <% 50.times do %>
+            <%= rand(0..9) %>
+          <% end %>
+        </p>
+      </div>
+  </div>
+</div>
+
+
+<div class="wrapper grid">
+  <div class="item">
+    <p>1st item</p>
+  </div>
+  <div class="item">
+    <p>2nd item</p>
+  </div>
+  <div class="item">
+    <p>3rd item</p>
+  </div>
+  <div class="item">
+    <p>4th item</p>
+  </div>
+  <div class="item">
+    <p>5th item</p>
+  </div>
+  <div class="item">
+    <p>6th item</p>
+  </div>
+  <div class="item">
+    <p>7th item</p>
+  </div>
+  <div class="item">
+    <p>8th item</p>
+  </div>
+
+
+</div>
